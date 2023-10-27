@@ -5,47 +5,47 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/10/26 14:50:29 by ayarmaya          #+#    #+#              #
-#    Updated: 2023/10/26 17:00:26 by ayarmaya         ###   ########.fr        #
+#    Created: 2023/10/27 16:33:38 by ayarmaya          #+#    #+#              #
+#    Updated: 2023/10/27 17:04:04 by ayarmaya         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-LIBC			=	ft_isalnum.c ft_isprint.c ft_isalpha.c \
-					ft_isdigit.c ft_memset.c ft_memcpy.c \
-					ft_bzero.c  ft_isascii.c ft_strlen.c \
-					ft_memmove.c
-					
-SRCS = $(LIBC) $(ADDITIONAL)
+NAME =	libft.a
 
-SRCSALL = $(LIBC) $(ADDITIONAL) $(BONUS)
+SRC =	ft_bzero.c \
+		ft_isalnum.c \
+		ft_isalpha.c \
+		ft_isascii.c \
+		ft_isdigit.c \
+		ft_isprint.c \
+		ft_memcpy.c	\
+		ft_memmove.c \
+		ft_strlen.c  \
+		ft_memset.c \
 
-OBJS = $(SRCS:.c=.o)
+OBJS =		$(SRC:.c=.o)
 
-OBJSALL = $(SRCSALL:.c=.o) 
+CC = 		gcc
 
-LIB = libft.a
+CFLAGS =	-Wall -Wextra -Werror
 
-CC = gcc
+RM = 		rm -f
 
-CFLAGS = -Wall -Werror -Wextra -I ./
+AR = 		ar crs
 
-.c.o:
-		$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+all:		$(NAME)
+	$(AR) $@ $^
 
-$(LIB):	$(OBJS)
-		ar -rsc $(LIB) $(OBJS)
+$(NAME): 	$(OBJS)
+	$(AR) $(NAME) $(OBJS)
 
-bonus:	$(OBJSALL)
-		ar -rsc $(LIB) $(OBJSALL)
+clean:
+	$(RM) $(OBJS)
 
-all: 	$(LIB)
+fclean:		clean
+	$(RM) $(NAME)
 
-clean:	
-		rm -f $(OBJSALL)
+re:
+	fclean $(NAME)
 
-fclean:	clean;
-		rm -f $(LIB)
-
-re:	fclean all
-
-.PHONY: all clean fclean re bonus
+.PHONY:	all clean fclean re

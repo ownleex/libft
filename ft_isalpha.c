@@ -6,11 +6,11 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 15:03:57 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/10/17 15:17:24 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/10/27 17:04:09 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(char c)
+int	ft_isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
