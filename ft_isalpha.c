@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 15:03:57 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/10/28 23:54:31 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/10/29 00:41:31 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,14 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
+
+/*
+int	main(void)
+{
+	int	c;
+
+	c = '0';
+	printf("%d\n", ft_isalpha(c));
+	return (0);
+}
+*/
