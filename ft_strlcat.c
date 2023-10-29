@@ -1,45 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/28 23:51:56 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/10/29 14:22:06 by ayarmaya         ###   ########.fr       */
+/*   Created: 2023/10/29 14:25:13 by ayarmaya          #+#    #+#             */
+/*   Updated: 2023/10/29 14:38:40 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t
-	ft_strlcpy(char *dst, const char *src, size_t size)
-{
-	size_t	i;
-
-	i = 0;
-	if (size > 0)
-	{
-		while (src[i] && i < (size - 1))
-		{
-			dst[i] = src[i];
-			i++;
-		}
-		dst[i] = 0;
-	}
-	while (src[i])
-		i++;
-	return (i);
-}
-
-/*
-int	main(void)
-{
-	char	src[] = "bla bla bla";
-	char	dst[255];
-
-	printf("%ld\n", ft_strlcpy(dst, src, 9));
-	printf("Destination : %s\n", dst);
-	return (0);
-}
-*/
