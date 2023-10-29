@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 18:31:54 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/10/25 18:31:57 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/10/29 00:50:18 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,15 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
+
+/*
+int	main(void)
+{
+	int	c;
+
+	c = ',';
+	printf("retourne : %d\n", ft_isalnum(c));
+
+	return (0);
+}
+*/

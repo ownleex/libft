@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 18:03:42 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/10/27 17:07:05 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/10/29 02:35:54 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,18 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+
+/*
+int main()
+{
+    char src[] = "Bonjour, monde!";
+    char dest[15];
+
+    ft_memcpy(dest, src, 5);
+
+    printf("Source: %s\n", src);
+    printf("Destination: %s\n", dest);
+
+    return 0;
+}
+*/

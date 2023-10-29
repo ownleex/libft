@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 18:04:20 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/10/25 18:44:24 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/10/29 02:34:17 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,3 +21,15 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
+
+/*
+int	main(void)
+{
+	int	c;
+
+	c = 'a';
+	printf("retourne : %d\n", ft_isprint(c));
+	
+	return (0);
+}
+*/
