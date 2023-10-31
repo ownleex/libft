@@ -6,7 +6,7 @@
 #    By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/27 16:33:38 by ayarmaya          #+#    #+#              #
-#    Updated: 2023/10/29 14:26:12 by ayarmaya         ###   ########.fr        #
+#    Updated: 2023/10/31 17:59:35 by ayarmaya         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,6 @@ clean:
 fclean:		clean
 	$(RM) $(NAME)
 
-re:
-	fclean $(NAME)
+re:	fclean all
 
 .PHONY:	all clean fclean re
