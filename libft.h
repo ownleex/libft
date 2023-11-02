@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 18:42:05 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/02 21:12:53 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/02 22:37:12 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*ft_strchr(const char *str, int c);
-//char	*ft_strrchr(const char *str, int c);
+char	*ft_strrchr(const char *str, int c);
 //int		ft_strncmp(const char *str1, const char *str2, size_t n);
 //void	*ft_memchr(const void *s, int c, size_t n);
 //int		ft_memcmp(const void *str1, const void *str2, size_t n);
