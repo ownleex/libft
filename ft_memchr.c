@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 23:16:28 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/02 23:28:41 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/02 23:31:25 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 
+/*
 int	main(void)
 {
 	const char	s[] = "boujour";
@@ -38,3 +39,4 @@ int	main(void)
 	printf("%p\n", memchr(s, c, n));
 	return (0);
 }
+*/
