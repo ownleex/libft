@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 23:38:07 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/03 01:17:18 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/05 01:12:05 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	main(void)
 {
 	const char	s1[] = "bonjour";
 	const char	s2[] = "bonnour";
-	size_t	n = 5;
+	size_t		n = 5;
 
 	printf("%d\n", ft_memcmp(s1, s2, n));
 	printf("%d\n", memcmp(s1, s2, n));
