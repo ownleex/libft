@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 23:16:28 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/02 23:46:48 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/05 02:34:07 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 }
 
 /*
-int	main(void)
+int	main(void)=
 {
 	const char	s[] = "boujour";
 	int	c = 'j';
