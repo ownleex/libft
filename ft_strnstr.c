@@ -6,10 +6,30 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:08:38 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/07 17:06:58 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/07 17:47:11 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int *ft_strnstr(char *str1, const char *str2, size_t n)
+char	*ft_strnstr(const char *str1, const char *str2, size_t n)
+{
+	size_t	len_n;
+	size_t	i;
+	size_t	j;
+
+	if (ft_strlen(str2) == 0)
+		return ((char *) str1);
+	len_n = ft_strlen(str2);
+	i = 0;
+	while (str1[i] && i < n)
+	{
+		j = 0;
+		while (str1[i + j] && str1[i + j] == str2[j] && i + j < n)
+			j++;
+		if (j == len_n)
+			return ((char *) str1 + i);
+		i++;
+	}
+	return (NULL);
+}
