@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:08:38 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/08 15:27:47 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/08 15:51:49 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,13 +45,15 @@ int main(void)
     char *resultat = strstr(haystack, needle);
     if (result != NULL)
     {
-        printf("Cherche '%s' dans '%s' avec les %zu characters.\n", needle, haystack, len);
-        printf("Result: %s\n", result);
+        printf("Cherche '%s' dans '%s' avec les %zu characters.\n", \
+		needle, haystack, len);
+        printf("Resultat: %s\n", result);
 	printf("Result: %s\n", resultat);
     }
     else
     {
-        printf("Did not find '%s' in '%s' within the first %zu characters.\n", needle, haystack, len);
+        printf("Did not find '%s' in '%s' within the first %zu characters.\n", \
+		needle, haystack, len);
     }
 
     return 0;
