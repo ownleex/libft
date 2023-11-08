@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:08:38 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/08 03:13:56 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/08 15:27:47 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ char	*ft_strnstr(const char *str1, const char *str2, size_t n)
 	return (NULL);
 }
 
+/*
 int main(void)
 {
     const char *haystack = "Hello, World!";
@@ -54,16 +55,5 @@ int main(void)
     }
 
     return 0;
-}
-
-/*
-int	main(void)
-{
-	const char	*str1 = "ceci est rempli de foin";
-	const char	*str2 = "hj";
-	size_t		n = 5;
-
-	printf("%s\n", ft_strnstr(str1, str2, n));
-	return (0);
 }
 */
