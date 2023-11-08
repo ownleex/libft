@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:08:38 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/07 17:47:11 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/07 23:10:53 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,37 @@ char	*ft_strnstr(const char *str1, const char *str2, size_t n)
 	}
 	return (NULL);
 }
+
+int main(void)
+{
+    const char *haystack = "Hello, World!";
+    const char *needle = "World";
+    size_t len = 40;
+
+    char *result = ft_strnstr(haystack, needle, len);
+    char *resultat = strstr(haystack, needle);
+    if (result != NULL)
+    {
+        printf("Found '%s' in '%s' within the first %zu characters.\n", needle, haystack, len);
+        printf("Result: %s\n", result);
+	printf("Result: %s\n", resultat);
+    }
+    else
+    {
+        printf("Did not find '%s' in '%s' within the first %zu characters.\n", needle, haystack, len);
+    }
+
+    return 0;
+}
+
+/*
+int	main(void)
+{
+	const char	*str1 = "ceci est rempli de foin";
+	const char	*str2 = "hj";
+	size_t		n = 5;
+
+	printf("%s\n", ft_strnstr(str1, str2, n));
+	return (0);
+}
+*/
