@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:39:17 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/08 18:27:44 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/09 04:34:22 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *str1, const void *str2, size_t n);
 char	*ft_strnstr(const char *str1, const char *str2, size_t n);
 int		ft_atoi(const char *nptr);
-//void	ft_calloc(size_t nmemb, size_t size);
+void	*ft_calloc(size_t nmemb, size_t size);
 //char	*ft_strdup(const char *str);
 
 #endif
