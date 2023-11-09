@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 20:16:02 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/09 20:21:18 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/09 20:23:08 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*single;
-	int	i;
-	int	j;
-	int	total_length;
+	int		i;
+	int		j;
+	int		total_length;
 
 	if (!s1 || !s2)
 		return (NULL);
