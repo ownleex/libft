@@ -6,7 +6,7 @@
 #    By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/27 16:33:38 by ayarmaya          #+#    #+#              #
-#    Updated: 2023/11/09 20:16:20 by ayarmaya         ###   ########.fr        #
+#    Updated: 2023/11/10 00:41:36 by ayarmaya         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SRC =	ft_bzero.c \
 	ft_isascii.c \
 	ft_isdigit.c \
 	ft_isprint.c \
-	ft_memcpy.c	\
+	ft_memcpy.c \
 	ft_memmove.c \
 	ft_strlen.c \
 	ft_memset.c \
