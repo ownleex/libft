@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 22:47:09 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/09 13:58:51 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/09 14:07:32 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,15 @@ int	ft_strncmp(const char *str1, const char *str2, size_t n)
 	}
 	while (i < n && (str1[i] != '\0' && str2[i] != '\0'))
 	{
-		if (str1[i] != str2[i])
+		if ((unsigned char)str1[i] != (unsigned char)str2[i])
 		{
-			return (str1[i] - str2[i]);
+			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
 		}
 		i++;
 	}
 	if (i < n)
 	{
-		return (str1[i] - str2[i]);
+		return ((unsigned char)str1[i] - (unsigned char)str2[i]);
 	}
 	return (0);
 }
