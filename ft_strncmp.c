@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 22:47:09 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/09 13:53:56 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/09 13:58:51 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,9 @@ int	ft_strncmp(const char *str1, const char *str2, size_t n)
 
 int	main(void)
 {
-	char	src[] = "test\200";
-	char	dest[] = "test\0";
-	size_t	n = '2';
-
-	printf("%d\n", ft_strncmp(src, dest, 1));
-	printf("%d\n", strncmp(src, dest, 1));
+	printf("%d\n", ft_strncmp("test\200", "test\0", 7));
+	printf("%d\n", strncmp("test\200", "test\0", 7));
+	printf("%d\n", ft_strncmp("test", "tsst", 7));
+	printf("%d\n", strncmp("test", "tsst", 7));
 	return (0);
 }
