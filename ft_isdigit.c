@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 01:54:02 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/10 23:03:31 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/10 23:22:10 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,15 @@ int	ft_isdigit(int c)
 	else
 		return (0);
 }
+
+/*
+int	main(void)
+{
+	int	c;
+
+	c = 5;
+	printf("retourne : %d\n", ft_isdigit(c));
+
+	return (0);
+}
+*/

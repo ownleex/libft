@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 01:53:53 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/10 23:03:18 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/10 23:22:19 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,15 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
+
+/*
+int	main(void)
+{
+	int	c;
+
+	c = -1;
+	printf("retourne : %d\n", ft_isascii(c));
+	
+	return (0);
+}
+*/

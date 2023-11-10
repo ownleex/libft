@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 01:53:07 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/10 23:01:54 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/10 23:23:12 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,11 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
+
+/*
+int	main(void)
+{
+	char	str[] = "bla bla bla";
+	ft_bzero(str, 3);
+}
+*/

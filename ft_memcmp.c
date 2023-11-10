@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 01:55:21 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/10 23:04:12 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/10 23:21:43 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,15 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 		return (s1[i] - s2[i]);
 	return (0);
 }
+
+/*
+int	main(void)
+{
+	const char	s1[] = "bonjour";
+	const char	s2[] = "bonnour";
+	size_t		n = 5;
+
+	printf("%d\n", ft_memcmp(s1, s2, n));
+	return (0);
+}
+*/
