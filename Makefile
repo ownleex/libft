@@ -6,7 +6,7 @@
 #    By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/10 01:58:16 by ayarmaya          #+#    #+#              #
-#    Updated: 2023/11/10 01:58:38 by ayarmaya         ###   ########.fr        #
+#    Updated: 2023/11/10 18:09:39 by ayarmaya         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,7 @@ SRC =	ft_bzero.c \
 	ft_strdup.c \
 	ft_substr.c \
 	ft_strjoin.c \
+	ft_strtrim.c \
 
 OBJS =		$(SRC:.c=.o)
 
