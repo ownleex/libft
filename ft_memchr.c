@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 01:55:09 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/10 01:55:12 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/10 22:37:16 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int	main(void)=
 	size_t	n = 5;
 	
 	printf("%p\n", ft_memchr(s, c, n));
-	printf("%p\n", memchr(s, c, n));
 	return (0);
 }
 */

@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 01:55:21 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/10 01:55:22 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/10 22:37:25 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ int	main(void)
 	size_t		n = 5;
 
 	printf("%d\n", ft_memcmp(s1, s2, n));
-	printf("%d\n", memcmp(s1, s2, n));
 	return (0);
 }
 */
