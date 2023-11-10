@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 01:55:50 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/10 01:55:51 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/10 23:04:43 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,18 +38,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-
-/*
-int main()
-{
-    char src[] = "Bonjodgdfgur, monde!fgfdgdgs";
-    char dest[] = "bonjour, monde!!!!!";
-
-    ft_memmove(dest, src, 5);
-
-    printf("Source: %s\n", src);
-    printf("Destination: %s\n", dest);
-
-    return 0;
-}
-*/

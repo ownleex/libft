@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 01:57:19 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/10 01:57:20 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/10 23:07:10 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,24 +27,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
-/*
-int	main(void)
-{
-	const char	*chaine = "Bonjour le monde";
-	char c = 'j';
-	
-	char *resultat = ft_strrchr(chaine, c);
-	
-	if (resultat != NULL)
-	{
-		printf("Le caractère '%c' est trouvé à la position : %ld\n",\
-		 c, resultat - chaine);
-	}
-	else
-	{
-		printf("Le caractère '%c' n'est pas trouvé dans la chaîne.\n", c);
-	}
-	return (0);
-}
-*/

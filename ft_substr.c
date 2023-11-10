@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 14:50:26 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/09 20:03:51 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/10 23:07:35 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,16 +38,3 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 	substr[i] = '\0';
 	return (substr);
 }
-
-/*
-int	main(void)
-{
-	char	*str;
-	char	*substr;
-
-	str = "test";
-	substr = ft_substr(str, 1, 2);
-	printf("%s\n", substr);
-	return (0);
-}
-*/

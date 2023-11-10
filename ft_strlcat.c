@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 01:56:28 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/10 01:56:29 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/10 23:05:56 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,18 +37,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	else
 		return (res_d + res_s);
 }
-/*
-int	main(void)
-{
-	char dest[50] = "Hello, ";
-	char src[] = "world!";
-	unsigned int size = 50;
-	unsigned int result;
-
-	printf("Before ft_strlcat: %s\n", dest);
-	result = ft_strlcat(dest, src, size);
-	printf("After ft_strlcat: %s\n", dest);
-	printf("Returned value: %u\n", result);
-	return (0);
-}
-*/

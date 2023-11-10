@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 01:56:42 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/10 01:56:43 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/10 23:06:08 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,3 @@ size_t
 		i++;
 	return (i);
 }
-
-/*
-int	main(void)
-{
-	char	src[] = "bla bla bla";
-	char	dst[255];
-
-	printf("%ld\n", ft_strlcpy(dst, src, 9));
-	printf("Destination : %s\n", dst);
-	return (0);
-}
-*/

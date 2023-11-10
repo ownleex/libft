@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:44:33 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/08 16:05:07 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/10 23:01:33 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,3 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
-
-/*
-int	main(void)
-{
-	printf("%d\n", ft_atoi("    -44575dgs"));
-	return (0);
-}
-*/
