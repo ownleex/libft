@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:39:17 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/11 12:20:13 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/11 12:27:46 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <stddef.h>
 # include <stdlib.h>
+# include <stdio.h>
+# include <string.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
