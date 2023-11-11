@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:07:22 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/10 23:22:48 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/11 12:21:25 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_calloc(size_t count, size_t size)
 	memory = (void *)malloc(size * count);
 	if (memory == NULL)
 		return (NULL);
-	memset(memory, 0, size * count);
+	ft_memset(memory, 0, size * count);
 	return (memory);
 }
 
