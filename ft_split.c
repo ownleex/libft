@@ -6,96 +6,79 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 01:56:48 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/12 14:48:46 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/12 15:12:48 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** Allocates and returns an array of fresh strings.
-** By spliting s using the character c as a delimiter.
-*/
-
-char	*ft_strcpyt(char *str, char c)
+static int	count_words(const char *str, char c)
 {
-	char	*dest;
-	int		i;
+	int i = 0;
+	int count = 0;
 
-	i = 0;
-	while (str[i] && str[i] != c)
-		i++;
-	dest = (char *)malloc(sizeof(char) * i + 1);
-	if (!dest)
-		return (NULL);
-	i = 0;
-	while (str[i] && str[i] != c)
+	while (str[i])
 	{
-		dest[i] = str[i];
-		i++;
+		while (str[i] == c)
+			i++;
+		if (str[i] != '\0')
+			count++;
+		while (str[i] && (str[i] != c))
+			i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return count;
 }
 
-int	cw(char *str, char c)
+static char	*word_dup(const char *str, int start, int finish)
 {
-	int	i;
+	char	*word;
+	int		i = 0;
 
-	i = 0;
-	while (*str)
-	{
-		while (*str && *str == c)
-			str++;
-		if (*str && *str != c)
-		{
-			i++;
-			while (*str && *str != c)
-				str++;
-		}
-	}
-	return (i);
+	word = (char *)malloc(sizeof(char) * (finish - start + 1));
+	if (!word)
+		return (NULL);
+	while (start < finish)
+		word[i++] = str[start++];
+	word[i] = '\0';
+	return word;
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	*str;
-	char	**dest;
-	int		i;
+	char	**result;
+	int		i = 0;
+	int		j = 0;
+	int		word_start = -1;
 
-	if (!s)
+	if (!s || !(result = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1))))
 		return (NULL);
-	str = (char *)s;
-	i = 0;
-	dest = (char **)malloc(sizeof(char *) * (cw(str, c) + 1));
-	if (!dest)
-		return (NULL);
-	while (*str)
+	while (s[i])
 	{
-		while (*str && *str == c)
-			str++;
-		if (*str && *str != c)
+		if (s[i] != c && word_start < 0)
+			word_start = i;
+		else if ((s[i] == c || s[i + 1] == '\0') && word_start >= 0)
 		{
-			dest[i] = ft_strcpyt(str, c);
-			i++;
-			while (*str && *str != c)
-				str++;
+			result[j++] = word_dup(s, word_start, (s[i] == c) ? i : i + 1);
+			word_start = -1;
 		}
+		i++;
 	}
-	dest[i] = NULL;
-	return (dest);
+	result[j] = NULL;
+	return result;
 }
 
+/*
 int	main(void)
 {
- 	char	**str;
- 	int		i;
+	char	**result;
+	int		i = 0;
 
-	str = ft_split("Bonjour, tout le monde!", ' ');
-	while (str[i])
+	result = ft_split("   lorem   ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ');
+	while (result[i])
 	{
-		printf("%s\n", str[i]);
+		printf("%s\n", result[i]);
 		i++;
 	}
 	return (0);
 }
+*/
