@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 18:17:41 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/12 18:26:15 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/12 18:27:21 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ char **ft_split(char const *s, char c)
 	    free(tab);
 	    return (NULL);
 	}
-	memcpy(tab[n], &s[j], j - i + 1);
+	ft_memcpy(tab[n], &s[j], j - i + 1);
 	tab[n][j - i + 1] = '\0';
 	j = i + 1;
 	i = j;
