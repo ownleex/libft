@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 18:17:41 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/12 18:49:17 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/12 18:49:40 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,4 +80,3 @@ char    **ft_split(char const *s, char c)
     tab[j] = NULL;
     return (tab);
 }
-
