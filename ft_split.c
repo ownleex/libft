@@ -6,16 +6,16 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 18:17:41 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/12 20:54:43 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/12 20:57:02 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t  ft_wordcount(char const *s, char c)
+size_t	ft_wordcount(char const *s, char c)
 {
-	size_t count;
-	size_t in_word;
+	size_t	count;
+	size_t	in_word;
 
 	count = 0;
 	in_word = 0;
@@ -30,7 +30,7 @@ size_t  ft_wordcount(char const *s, char c)
 			in_word = 0;
 		s++;
 	}
-	return count;
+	return (count);
 }
 
 char    **ft_split(char const *s, char c)
@@ -55,7 +55,7 @@ char    **ft_split(char const *s, char c)
 				while (word_index > 0)
 					free(arr[--word_index]);
 				free(arr);
-				return NULL;
+				return (NULL);
 			}
 			ft_strlcpy(arr[word_index], s, word_len + 1);
 			s += word_len;
@@ -65,7 +65,7 @@ char    **ft_split(char const *s, char c)
 			s++;
 	}
 	arr[word_index] = NULL;
-	return arr;
+	return (arr);
 }
 
 /*
