@@ -6,98 +6,112 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 01:56:48 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/12 02:13:36 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/12 14:41:02 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_count_words(char const *s, char c)
+static char
+	**ft_alloc_split(char const *s, char c)
 {
-	int	i;
-	int	count;
+	size_t	i;
+	char	**split;
+	size_t	total;
 
 	i = 0;
-	count = 0;
-	if (s[i] != c && s[i] != '\0')
-		count++;
-	while (s[i] != '\0')
+	total = 0;
+	while (s[i])
 	{
-		if (s[i] == c && s[i + 1] != c && s[i + 1] != '\0')
-			count++;
+		if (s[i] == c)
+			total++;
 		i++;
 	}
-	return (count);
+	split = (char**)malloc(sizeof(s) * (total + 2));
+	if (!split)
+		return (NULL);
+	return (split);
 }
 
-static int	ft_word_len(char const *s, char c)
+void
+	*ft_free_all_split_alloc(char **split, size_t elts)
 {
-	int	i;
-	int	len;
+	size_t	i;
 
 	i = 0;
-	len = 0;
-	while (s[i] != c && s[i] != '\0')
+	while (i < elts)
 	{
-		len++;
+		free(split[i]);
 		i++;
 	}
-	return (len);
-}
-
-static char	**ft_free(char **tab, int i)
-{
-	while (i >= 0)
-	{
-		free(tab[i]);
-		i--;
-	}
-	free(tab);
+	free(split);
 	return (NULL);
 }
 
-char	**ft_split(char const *s, char c)
+static void
+	*ft_split_range(char **split, char const *s,
+		t_split_next *st, t_split_next *lt)
 {
-	char	**tab;
-	int		i;
-	int		j;
-	int		k;
-
-	i = 0;
-	j = 0;
-	if (!s || !(tab = (char **)malloc(sizeof(char *) * \
-	(ft_count_words(s, c) + 1))))
-		return (NULL);
-	while (i < ft_count_words(s, c))
-	{
-		k = 0;
-		if (!(tab[i] = (char *)malloc(sizeof(char) * \
-		(ft_word_len(&s[j], c) + 1))))
-			return (ft_free(tab, i));
-		while (s[j] == c)
-			j++;
-		while (s[j] != c && s[j] != '\0')
-			tab[i][k++] = s[j++];
-		tab[i][k] = '\0';
-		i++;
-	}
-	tab[i] = NULL;
-	return (tab);
+	split[lt->length] = ft_substr(s, st->start, st->length);
+	if (!split[lt->length])
+		return (ft_free_all_split_alloc(split, lt->length));
+	lt->length++;
+	return (split);
 }
 
-/*
-int	main(void)
+static void
+	*ft_split_by_char(char **split, char const *s, char c)
 {
-	char	**tab;
-	int	i;
+	size_t			i;
+	t_split_next	st;
+	t_split_next	lt;
 
 	i = 0;
-	tab = ft_split("salut les amis", ' ');
-	while (tab[i])
+	lt.length = 0;
+	lt.start = 0;
+	while (s[i])
 	{
-		printf("%s\n", tab[i]);
+		if (s[i] == c)
+		{
+			st.start = lt.start;
+			st.length = (i - lt.start);
+			if (i > lt.start && !ft_split_range(split, s, &st, &lt))
+				return (NULL);
+			lt.start = i + 1;
+		}
+		i++;
+	}
+	st.start = lt.start;
+	st.length = (i - lt.start);
+	if (i > lt.start && i > 0 && !ft_split_range(split, s, &st, &lt))
+		return (NULL);
+	split[lt.length] = 0;
+	return (split);
+}
+
+char
+	**ft_split(char const *s, char c)
+{
+	char	**split;
+
+	if (!(split = ft_alloc_split(s, c)))
+		return (NULL);
+	if (!ft_split_by_char(split, s, c))
+		return (NULL);
+	return (split);
+}
+
+int main()
+{
+	char	**split;
+	int		i;
+
+	i = 0;
+	split = ft_split("bonjour, monde!", 'o');
+	while (split[i])
+	{
+		printf("%s\n", split[i]);
 		i++;
 	}
 	return (0);
 }
-*/
