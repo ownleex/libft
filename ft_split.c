@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 18:17:41 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/12 18:38:59 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/12 18:49:17 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,17 @@ char    **ft_split(char const *s, char c)
 {
     char    **tab;
     int     j = 0;
-    int     words = ft_count_words(s, c);
+    int     words;
 
+    while (*s == c)
+        s++;
+    if (*s == '\0')
+    {
+        tab = (char **)malloc(sizeof(char *));
+        tab[0] = NULL;
+        return (tab);
+    }
+    words = ft_count_words(s, c);
     tab = (char **)malloc(sizeof(char *) * (words + 1));
     while (*s != '\0')
     {
@@ -71,3 +80,4 @@ char    **ft_split(char const *s, char c)
     tab[j] = NULL;
     return (tab);
 }
+
