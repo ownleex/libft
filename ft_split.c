@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 01:56:48 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/12 02:09:29 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/12 02:13:36 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,18 +59,20 @@ static char	**ft_free(char **tab, int i)
 char	**ft_split(char const *s, char c)
 {
 	char	**tab;
-	int	i;
-	int	j;
-	int	k;
+	int		i;
+	int		j;
+	int		k;
 
 	i = 0;
 	j = 0;
-	if (!s || !(tab = (char **)malloc(sizeof(char *) * (ft_count_words(s, c) + 1))))
+	if (!s || !(tab = (char **)malloc(sizeof(char *) * \
+	(ft_count_words(s, c) + 1))))
 		return (NULL);
 	while (i < ft_count_words(s, c))
 	{
 		k = 0;
-		if (!(tab[i] = (char *)malloc(sizeof(char) * (ft_word_len(&s[j], c) + 1))))
+		if (!(tab[i] = (char *)malloc(sizeof(char) * \
+		(ft_word_len(&s[j], c) + 1))))
 			return (ft_free(tab, i));
 		while (s[j] == c)
 			j++;
