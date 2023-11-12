@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 18:17:41 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/12 19:36:11 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/12 19:43:45 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,3 +95,20 @@ char		**ft_split(const char *s, char c)
 		return (NULL);
 	return (res);
 }
+
+/*
+int	main(void)
+{
+	char	**res;
+	int		i;
+
+	i = 0;
+	res = ft_split("   lorem   ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ');
+	while (res[i] != NULL)
+	{
+		printf("%s\n", res[i]);
+		i++;
+	}
+	return (0);
+}
+*/
