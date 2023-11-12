@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 18:17:41 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/12 20:57:02 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/12 20:58:48 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,14 @@ size_t	ft_wordcount(char const *s, char c)
 	return (count);
 }
 
-char    **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	char    **arr;
-	size_t  word_len;
-	size_t  word_index;
+	char	**arr;
+	size_t	word_len;
+	size_t	word_index;
 
-	if (!s || !(arr = (char **)malloc(sizeof(char *) * (ft_wordcount(s, c) + 1))))
+	if (!s || !(arr = (char **)malloc(sizeof(char *) * \
+	(ft_wordcount(s, c) + 1))))
 		return NULL;
 	word_index = 0;
 	while (*s)
@@ -75,7 +76,7 @@ int	main(void)
 	int		i;
 
 	i = 0;
-	res = ft_split("   lorem   ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ');
+	res = ft_split("   lorem   ipsum dolor sit amet, consectetur Sed non risus. Suspendisse", ' ');
 	while (res[i] != NULL)
 	{
 		printf("%s\n", res[i]);
