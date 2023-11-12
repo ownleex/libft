@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 18:17:41 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/12 19:35:04 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/12 19:36:11 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 static int	char_is_separator(char c, char sep)
 {
-	int	i;
-
-	i = 0;
 	if (c == sep || c == '\0')
 		return (1);
 	return (0);
