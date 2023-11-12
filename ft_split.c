@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 18:17:41 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/12 21:00:59 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/12 21:01:50 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	count_words(char *str, char sep)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (char_is_separator(str[i + 1], sep) == 1
+		if (char_is_separator(str[i + 1], sep) == 1 \
 		&& char_is_separator(str[i], sep) == 0)
 			words++;
 		i++;
