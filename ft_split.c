@@ -6,60 +6,68 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 18:17:41 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/12 18:28:37 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/12 18:38:59 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char **ft_split(char const *s, char c)
+int     ft_count_words(char const *s, char c)
 {
-    int i;
-    int j;
-    int n;
-    char **tab;
+    int count = 0;
+    int sub_str = 0;
 
+    while (*s != '\0')
+    {
+        if (sub_str == 1 && *s == c)
+            sub_str = 0;
+        if (sub_str == 0 && *s != c)
+        {
+            sub_str = 1;
+            count++;
+        }
+        s++;
+    }
+    return (count);
+}
+
+char    *ft_malloc_word(char const *s, char c)
+{
+    char    *word;
+    int     i = 0;
+
+    while (s[i] != '\0' && s[i] != c)
+        i++;
+    word = (char *)malloc(sizeof(char) * (i + 1));
     i = 0;
-    j = 0;
-    n = 0;
-
-    /* Compte le nombre de mots */
-    while (s[i])
+    while (s[i] != '\0' && s[i] != c)
     {
-	if (s[i] != c)
-	{
-	    n++;
-	    while (s[i] != c && s[i])
-		i++;
-	}
-	else
-	    i++;
+        word[i] = s[i];
+        i++;
     }
+    word[i] = '\0';
+    return (word);
+}
 
-    /* Alloue le tableau de mots */
-    tab = malloc(sizeof(char *) * (n + 1));
-    if (!tab)
-	return (NULL);
+char    **ft_split(char const *s, char c)
+{
+    char    **tab;
+    int     j = 0;
+    int     words = ft_count_words(s, c);
 
-    /* Parcourt la chaîne et copie les mots dans le tableau */
-    while (n--)
+    tab = (char **)malloc(sizeof(char *) * (words + 1));
+    while (*s != '\0')
     {
-	while (s[j] == c)
-	    j++;
-	tab[n] = malloc(sizeof(char) * (j - i + 2));
-	if (!tab[n])
-	{
-	    while (n < i)
-		free(tab[++n]);
-	    free(tab);
-	    return (NULL);
-	}
-	ft_memcpy(tab[n], &s[j], j - i + 1);
-	tab[n][j - i + 1] = '\0';
-	j = i + 1;
-	i = j;
+        if (*s != c)
+        {
+            tab[j] = ft_malloc_word(s, c);
+            j++;
+            while (*s != '\0' && *s != c)
+                s++;
+        }
+        else
+            s++;
     }
-    tab[n] = NULL;
-
+    tab[j] = NULL;
     return (tab);
 }
