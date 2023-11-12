@@ -6,11 +6,11 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 18:17:41 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/12 18:27:21 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/12 18:28:37 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char **ft_split(char const *s, char c)
 {
