@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 18:17:41 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/15 16:47:00 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/15 16:48:18 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ char	**ft_split(const char *s, char c)
 		return (NULL);
 	str = (char*)s;
 	words = count_words(str, c);
-	if ((res = (char**)malloc(sizeof(char*) * (words + 1))) == NULL)
+	if ((res = (char **)malloc(sizeof(char *) * (words + 1))) == NULL)
 		return (NULL);
 	res[words] = 0;
 	if (write_split(res, str, c) == NULL)
@@ -103,7 +103,7 @@ int	main(void)
 	int		i;
 
 	i = 0;
-	res = ft_split("   lorem   ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ');
+	res = ft_split("   lorem   ipsum dolor sit amet elit. Sed non risus. Suspendisse", ' ');
 	while (res[i] != NULL)
 	{
 		printf("%s\n", res[i]);
