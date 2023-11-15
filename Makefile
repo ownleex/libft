@@ -6,7 +6,7 @@
 #    By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/10 01:58:16 by ayarmaya          #+#    #+#              #
-#    Updated: 2023/11/15 20:36:10 by ayarmaya         ###   ########.fr        #
+#    Updated: 2023/11/15 21:40:09 by ayarmaya         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,6 +43,7 @@ SRC =	ft_bzero.c \
 	ft_strmapi.c \
 	ft_striteri.c \
 	ft_putchar_fd.c \
+	ft_putstr_fd.c \
 
 OBJS =		$(SRC:.c=.o)
 
