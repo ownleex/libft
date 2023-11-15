@@ -6,12 +6,11 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 17:15:55 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/15 17:27:22 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/15 17:27:58 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 static int	num_digit(long num)
 {
