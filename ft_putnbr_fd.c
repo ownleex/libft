@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 00:07:37 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/16 00:14:22 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/16 00:16:42 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putnbr_fd(int nb, int fd)
 {
 	long	nbr;
-	
+
 	nbr = nb;
 	if (nbr < 0)
 	{
