@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 18:39:43 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/15 18:52:01 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/15 18:53:02 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 {
-	int	i;
+	unsigned int	i;
 
 	if (!s || !f)
 		return ;
 	i = 0;
 	while (s[i])
 	{
-		(f*)(i, &s[i]);
+		(*f)(i, &s[i]);
 		i++;
 	}
 }
