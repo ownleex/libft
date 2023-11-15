@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 18:17:41 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/15 16:51:26 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/15 16:52:35 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,20 +61,20 @@ static void	*write_split(char **split, char *str, char sep)
 		if (char_is_separator(str[i], sep) == 1)
 			i++;
 	else
+	{
+		j = 0;
+		while (char_is_separator(str[i + j], sep) == 0)
+			j++;
+		if ((split[word] = (char *)malloc(sizeof(char) * (j + 1))) == NULL)
 		{
-			j = 0;
-			while (char_is_separator(str[i + j], sep) == 0)
-				j++;
-			if ((split[word] = (char *)malloc(sizeof(char) * (j + 1))) == NULL)
-			{
-				while (word > 0)
-					free(split[--word]);
-				return (NULL);
-			}
-			write_word(split[word], str + i, sep);
-			i += j;
-			word++;
+			while (word > 0)
+				free(split[--word]);
+			return (NULL);
 		}
+		write_word(split[word], str + i, sep);
+		i += j;
+		word++;
+	}
 	return ((void *)1);
 }
 
