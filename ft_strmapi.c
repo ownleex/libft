@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 17:33:25 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/15 17:42:43 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/15 17:44:27 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
 {
-	char		*result;
-	unsigned int		i;
+	char	*result;
+	size_t	i;
 
 	if (!str || !f)
 		return (NULL);
