@@ -6,7 +6,7 @@
 #    By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/10 01:58:16 by ayarmaya          #+#    #+#              #
-#    Updated: 2023/11/16 00:13:13 by ayarmaya         ###   ########.fr        #
+#    Updated: 2023/11/16 00:49:20 by ayarmaya         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,8 +46,18 @@ SRC =	ft_bzero.c \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
+SRC_BONUS =	ft_lstnew.c \
+#	ft_lstadd_front.c \
+	ft_lstsize.c \
+	ft_lstlast.c \
+	ft_lstadd_back.c \
+	ft_lstdelone.c \
+	ft_lstclear.c \
+	ft_lstiter.c \
+	ft_lstmap.c
 
 OBJS =		$(SRC:.c=.o)
+OBJS_BONUS =	$(SRC_BONUS:.c=.o)
 
 CC = 		gcc
 
@@ -62,12 +72,15 @@ all:		$(NAME)
 $(NAME): 	$(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
+bonus:		$(OBJS) $(OBJS_BONUS)
+	$(AR) $(NAME) $(OBJS_BONUS)
+
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(OBJS_BONUS)
 
 fclean:		clean
 	$(RM) $(NAME)
 
 re:	fclean all
 
-.PHONY:	all clean fclean re
+.PHONY:	all clean fclean re bonus
