@@ -6,7 +6,7 @@
 #    By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/10 01:58:16 by ayarmaya          #+#    #+#              #
-#    Updated: 2023/11/16 00:49:20 by ayarmaya         ###   ########.fr        #
+#    Updated: 2023/11/16 00:57:28 by ayarmaya         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,7 +73,7 @@ $(NAME): 	$(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
 bonus:		$(OBJS) $(OBJS_BONUS)
-	$(AR) $(NAME) $(OBJS_BONUS)
+	$(AR) $(NAME) $(OBJS) $(OBJS_BONUS)
 
 clean:
 	$(RM) $(OBJS) $(OBJS_BONUS)
