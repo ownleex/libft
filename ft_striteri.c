@@ -1,46 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/15 17:33:25 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/15 17:52:56 by ayarmaya         ###   ########.fr       */
+/*   Created: 2023/11/15 18:39:43 by ayarmaya          #+#    #+#             */
+/*   Updated: 2023/11/15 18:49:03 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
+void    ft_striteri(char *, void (*f)(unsigned int, char*));
 {
-	char	*result;
-	size_t	i;
+        int     i;
 
-	if (!str || !f)
-		return (NULL);
-	result = malloc(sizeof(char) * (ft_strlen(str) + 1));
-	if (!result)
-		return (NULL);
-	i = 0;
-	while (str[i])
-	{
-		result[i] = f(i, str[i]);
-		i++;
-	}
-	result[i] = 0;
-	return (result);
+        if (!s || !f)
+                return ;
+        i = 0;
+        while (s[i])
+        {
+                (f*)(i, &s[i]);
+                i++;
+        }
 }
 
 /*
 int     main(void)
 {
-	char    *str = "Hello World!";
-	char    *result;
+        char    str[] = "Hello World!";
+        void    (*f)(unsigned int, char*);
 
-	result = ft_strmapi(str, &ft_toupper);
-	printf("%s\n", result);
-	free(result);
-	return (0);
+        f = &ft_putchar;
+        ft_striteri(str, f);
+        return (0);
 }
 */
