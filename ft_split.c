@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 18:17:41 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/15 16:49:31 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/15 16:50:48 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ static void	*write_split(char **split, char *str, char sep)
 	while (str[i] != '\0')
 		if (char_is_separator(str[i], sep) == 1)
 			i++;
-		else
+			else
 		{
 			j = 0;
 			while (char_is_separator(str[i + j], sep) == 0)
@@ -103,7 +103,7 @@ int	main(void)
 	int		i;
 
 	i = 0;
-	res = ft_split("   lorem   ipsum dolor sit amet elit. Sed non risus. Suspendisse", ' ');
+	res = ft_split("   lorem   ipsum dolor sit amet el Suspendisse", ' ');
 	while (res[i] != NULL)
 	{
 		printf("%s\n", res[i]);
