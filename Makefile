@@ -6,7 +6,7 @@
 #    By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/10 01:58:16 by ayarmaya          #+#    #+#              #
-#    Updated: 2023/11/16 00:57:28 by ayarmaya         ###   ########.fr        #
+#    Updated: 2023/11/16 00:59:51 by ayarmaya         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ SRC =	ft_bzero.c \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
-SRC_BONUS =	ft_lstnew.c \
+SRC_BONUS = ft_lstnew.c \
 #	ft_lstadd_front.c \
 	ft_lstsize.c \
 	ft_lstlast.c \
