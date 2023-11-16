@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 16:23:05 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/16 16:30:20 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/16 16:31:32 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstlast(t_list *lst)
 	while (lst)
 	{
 		if (!lst->next)
-			return (lst):
+			return (lst);
 		lst = lst->next;
 	}
 	return (lst);
