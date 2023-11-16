@@ -6,18 +6,18 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 01:45:11 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/16 01:51:30 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/16 15:19:03 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *nouveau)
 {
-	if (!lst || !new)
+	if (!lst || !nouveau)
 		return ;
-	new->next = *lst;
-	*lst = new;
+	nouveau->next = *lst;
+	*lst = nouveau;
 }
 
 /*
