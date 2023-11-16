@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/16 15:19:39 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/16 16:26:58 by ayarmaya         ###   ########.fr       */
+/*   Created: 2023/11/16 16:23:05 by ayarmaya          #+#    #+#             */
+/*   Updated: 2023/11/16 16:27:46 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-	size_t	i;
-
-	i = 0;
 	while (lst)
 	{
+		if (!lst->nexte)
+			return (lst):
 		lst = lst->next;
-		i++;
 	}
-	return (i);
+	return (lst);
 }
 
 /*
@@ -37,7 +35,7 @@ int     main(void)
 	new_lst2 = ft_lstnew("third");
 	ft_lstadd_front(&lst, new_lst);
 	ft_lstadd_front(&lst, new_lst2);
-	printf("%d\n", ft_lstsize(lst));
+	printf("%s\n", ft_lstlast(lst)->content);
 	return (0);
 }
 */

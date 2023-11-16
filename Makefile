@@ -6,7 +6,7 @@
 #    By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/10 01:58:16 by ayarmaya          #+#    #+#              #
-#    Updated: 2023/11/16 15:20:50 by ayarmaya         ###   ########.fr        #
+#    Updated: 2023/11/16 16:22:33 by ayarmaya         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,8 +52,8 @@ OBJS		=	$(SRC:.c=.o)
 SRC_BONUS	=	ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstsize.c \
-#			ft_lstlast.c \
-			ft_lstadd_back.c \
+			ft_lstlast.c \
+#			ft_lstadd_back.c \
 			ft_lstdelone.c \
 			ft_lstclear.c \
 			ft_lstiter.c \
