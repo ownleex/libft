@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 15:19:39 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/16 15:26:27 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/16 15:27:32 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	size_t  i;
+	size_t	i;
 
 	i = 0;
 	while (lst)
