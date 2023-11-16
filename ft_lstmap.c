@@ -6,9 +6,11 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 17:05:37 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/16 18:37:34 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/16 18:49:22 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
