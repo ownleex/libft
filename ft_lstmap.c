@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 17:05:37 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/16 17:21:12 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/16 17:21:59 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	t_list *new_lst;
-	t_list *new_elem;
-	t_list *prev_elem;
+	t_list	*new_lst;
+	t_list	*new_elem;
+	t_list	*prev_elem;
 
 	new_lst = NULL;
 	if (lst && (*f))
