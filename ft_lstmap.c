@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 17:05:37 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/16 19:05:46 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/17 01:22:33 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	return (newlst);
 }
 
+/*
 int	main(void)
 {
 	t_list	*lst;
@@ -71,3 +72,4 @@ int	main(void)
 	ft_lstclear(&newlst, ft_del);
 	return (0);
 }
+*/
