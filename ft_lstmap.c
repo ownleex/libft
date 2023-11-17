@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 17:05:37 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/16 18:49:22 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/16 19:05:46 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,38 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		lst = lst->next;
 	}
 	return (newlst);
+}
+
+int	main(void)
+{
+	t_list	*lst;
+	t_list	*newlst;
+	int		values[] = {1, 2, 3, 4, 5};
+	int		i;
+
+	lst = NULL;
+	i = 0;
+	while (i < 5)
+	{
+		ft_lstadd_back(&lst, ft_lstnew(&values[i]));
+		i++;
+	}
+
+	// Afficher la liste originale
+	printf("Liste originale: ");
+	ft_lstiter(lst, ft_printlstcontent);
+	printf("\n");
+
+	// Appliquer ft_lstmap
+	newlst = ft_lstmap(lst, ft_doubler, ft_del);
+
+	// Afficher la nouvelle liste
+	printf("Nouvelle liste: ");
+	ft_lstiter(newlst, ft_printlstcontent);
+	printf("\n");
+
+	// Nettoyage
+	ft_lstclear(&lst, ft_del);
+	ft_lstclear(&newlst, ft_del);
+	return (0);
 }
