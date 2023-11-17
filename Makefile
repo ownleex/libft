@@ -6,7 +6,7 @@
 #    By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/10 01:58:16 by ayarmaya          #+#    #+#              #
-#    Updated: 2023/11/18 00:21:06 by ayarmaya         ###   ########.fr        #
+#    Updated: 2023/11/18 00:22:28 by ayarmaya         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,9 +57,9 @@ SRC_BONUS	=	ft_lstnew
 			ft_lstiter
 			ft_lstmap
 
-SRCS		= 	$(addsuffix .c, ${SRC})
+SRCS		=	$(addsuffix .c, ${SRC})
 
-B_SRCS		= 	$(addsuffix _bonus.c, ${SRC_BONUS})
+B_SRCS		=	$(addsuffix _bonus.c, ${SRC_BONUS})
 
 OBJS		=	$(SRCS:.c=.o)
 
