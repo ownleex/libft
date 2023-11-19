@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 01:56:28 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/19 18:08:12 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/19 18:09:09 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		return (res_d + res_s);
 }
 
+/*
 int	main(void)
 {
 	char dest[7] = "Hello, ";
@@ -49,3 +50,4 @@ int	main(void)
 	printf("Returned value: %u\n", result);
 	return (0);
 }
+*/
