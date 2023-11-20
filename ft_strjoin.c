@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 20:16:02 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/20 16:51:51 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/21 00:16:13 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*single;
+	char	*result;
 	int		i;
 	int		j;
 	int		total_len;
@@ -22,23 +22,23 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!s1 || !s2)
 		return (NULL);
 	total_len = ft_strlen(s1) + ft_strlen(s2);
-	single = (char *)malloc(sizeof(char) * (total_len + 1));
-	if (!single)
+	result = (char *)malloc(sizeof(char) * (total_len + 1));
+	if (!result)
 		return (NULL);
 	i = 0;
 	j = 0;
 	while (s1[i])
 	{
-		single[i] = s1[i];
+		result[i] = s1[i];
 		i++;
 	}
 	while (s2[j])
 	{
-		single[i + j] = s2[j];
+		result[i + j] = s2[j];
 		j++;
 	}
-	single[i + j] = '\0';
-	return (single);
+	result[i + j] = '\0';
+	return (result);
 }
 
 /*
