@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 14:50:26 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/20 21:44:28 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/20 21:57:34 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,11 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 	result = (char *)malloc(sizeof(*str) * (len + 1));
 	if (!result)
 		return (NULL);
+	if (start >= ft_strlen(str))
+	{
+		result[0] = '\0';
+		return (result);
+	}
 	i = 0;
 	j = 0;
 	while (str[i])
