@@ -6,39 +6,27 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 14:50:26 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/20 21:57:34 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/20 22:06:32 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *str, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	size_t	j;
-	char	*result;
+	unsigned int	idx;
+	char			*modified_s;
 
-	result = (char *)malloc(sizeof(*str) * (len + 1));
-	if (!result)
+	if (!s || !(modified_s = malloc(sizeof(char) * (len + 1))))
 		return (NULL);
-	if (start >= ft_strlen(str))
+	idx = 0;
+	while (start < ft_strlen((char *)s) && s[start + idx] && idx < len)
 	{
-		result[0] = '\0';
-		return (result);
+		modified_s[idx] = s[start + idx];
+		idx++;
 	}
-	i = 0;
-	j = 0;
-	while (str[i])
-	{
-		if (i >= start && j < len)
-		{
-			result[j] = str[i];
-			j++;
-		}
-		i++;
-	}
-	result[j] = 0;
-	return (result);
+	modified_s[idx] = '\0';
+	return (modified_s);
 }
 
 /*
