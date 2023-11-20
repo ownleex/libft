@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:08:38 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/20 17:45:52 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/20 17:56:38 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,16 @@
 char	*ft_strnstr(const char *str1, const char *str2, size_t n)
 {
 	size_t	i;
-	size_t	j;
+	size_t	len;
 
-	if (ft_strlen(str2) == 0)
-		return ((char *) str1);
+	if (!*str2)
+		return ((char *)str1);
 	i = 0;
-	j = 0;
-	while (str1[i] && i < n)
+	len = strlen(str2);
+	while (str1[i] && i + len <= n)
 	{
-		while (str1[i + j] && str1[i + j] == str2[j] && i + j < n)
-			j++;
-		if (j == ft_strlen(str2))
-			return ((char *) str1 + i);
+		if (!ft_strncmp(str1 + i, str2, len))
+			return ((char *)str1 + i);
 		i++;
 	}
 	return (NULL);
