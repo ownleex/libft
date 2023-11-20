@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 14:50:26 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/20 22:06:32 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/20 22:22:48 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,20 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned int	idx;
-	char			*modified_s;
+	unsigned int	i;
+	char			*result;
 
-	if (!s || !(modified_s = malloc(sizeof(char) * (len + 1))))
+	result = malloc(sizeof(char) * (ft_strlen(s + start) + 1));
+	if (!s || !result)
 		return (NULL);
-	idx = 0;
-	while (start < ft_strlen((char *)s) && s[start + idx] && idx < len)
+	i = 0;
+	while (start < ft_strlen((char *)s) && s[start + i] && i < len)
 	{
-		modified_s[idx] = s[start + idx];
-		idx++;
+		result[i] = s[start + i];
+		i++;
 	}
-	modified_s[idx] = '\0';
-	return (modified_s);
+	result[i] = '\0';
+	return (result);
 }
 
 /*
