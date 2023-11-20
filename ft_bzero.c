@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 01:53:07 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/10 23:23:12 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/20 16:14:49 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_bzero(void *s, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		((unsigned char *)s)[i] = 0;
+		*(unsigned char *)(s + i) = 0;
 		i++;
 	}
 }
