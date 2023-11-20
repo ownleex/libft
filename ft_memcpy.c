@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 01:55:32 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/17 01:12:46 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/20 16:18:22 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		return (NULL);
 	while (i < n)
 	{
-		((char *)dest)[i] = ((char *)src)[i];
+		*(unsigned char *)(dest + i) = *(unsigned char *)(src + i);
 		i++;
 	}
 	return (dest);
