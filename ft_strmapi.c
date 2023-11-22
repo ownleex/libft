@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 17:33:25 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/22 18:30:16 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/22 22:41:40 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,19 @@ char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
 }
 
 /*
-int     main(void)
+char	my_func(unsigned int i, char c)
 {
-	char    *str = "Hello World!";
-	char    *result;
+	return c + i;
+}
 
-	result = ft_strmapi(str, &ft_toupper);
+int	main()
+{
+	char	*str = "Hello World!";
+	char	*result;
+
+	result = ft_strmapi(str, my_func);
 	printf("%s\n", result);
 	free(result);
-	return (0);
+	return 0;
 }
 */
