@@ -6,22 +6,11 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 18:17:41 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/22 15:41:29 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/22 19:30:53 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static char	**ft_free(char **ptr, int i)
-{
-	while (i > 0)
-	{
-		i--;
-		free(ptr[i]);
-	}
-	free(ptr);
-	return (0);
-}
 
 static int	ft_count_words(char const *str, char c)
 {
@@ -79,7 +68,7 @@ static char	**ft_split_words(char const *s, char c, char **s2, int num_words)
 		}
 		s2[word] = (char *)malloc(sizeof(char) * (word_len + 1));
 		if (!s2[word])
-			return (ft_free(s2, word));
+			return (NULL);
 		ft_putword(s2[word], s, i, word_len);
 		word_len = 0;
 		word++;
