@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:09:52 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/21 01:46:17 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/22 15:37:38 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = ft_strlen(s1);
 	while (end > start && ft_char_in_set(s1[end - 1], set))
 		end--;
-	str = (char *)malloc(sizeof(*s1) * (end - start + 1));
+	str = (char *)malloc(sizeof(char) * (end - start + 1));
 	if (!str)
 		return (NULL);
 	i = 0;
@@ -49,7 +49,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (str);
 }
 
-/*
 int	main(void)
 {
 	char	*s1;
@@ -62,4 +61,3 @@ int	main(void)
 	printf("%s\n", single);
 	return (0);
 }
-*/
