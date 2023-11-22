@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:09:52 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/22 15:40:00 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/22 15:41:07 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (str);
 }
 
+/*
 int	main(void)
 {
 	char	*s1;
@@ -61,3 +62,4 @@ int	main(void)
 	printf("%s\n", single);
 	return (0);
 }
+*/
