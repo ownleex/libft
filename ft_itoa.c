@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 17:15:55 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/15 17:27:58 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/22 16:49:21 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*ft_itoa(int n)
 	len = num_digit(n);
 	nl = n;
 	if (n < 0)
-		nl *= -1;
+		nl = nl * -1;
 	result = malloc(sizeof(char) * (len + 1));
 	if (!result)
 		return (NULL);
