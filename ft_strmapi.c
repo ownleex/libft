@@ -6,24 +6,24 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 17:33:25 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/22 23:06:10 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/23 14:05:07 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*result;
 	size_t	i;
 
-	result = malloc(sizeof(char) * (ft_strlen(str) + 1));
+	result = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!result)
 		return (NULL);
 	i = 0;
-	while (str[i])
+	while (s[i])
 	{
-		result[i] = (*f)(i, str[i]);
+		result[i] = (*f)(i, s[i]);
 		i++;
 	}
 	result[i] = 0;
@@ -31,17 +31,17 @@ char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
 }
 
 /*
-char	my_func(unsigned int i, char c)
+char	minuscule(unsigned int i, char c)
 {
-	return c + i;
+	return c + 32;
 }
 
 int	main()
 {
-	char	*str = "Hello World!";
+	char	*str = "HELLO";
 	char	*result;
 
-	result = ft_strmapi(str, my_func);
+	result = ft_strmapi(str, minuscule);
 	printf("%s\n", result);
 	free(result);
 	return 0;

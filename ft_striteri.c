@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 18:39:43 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/22 17:28:01 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/23 14:02:53 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,17 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 }
 
 /*
-int     main(void)
+void	minuscule(unsigned int i, char *c)
 {
-	char    str[] = "Hello World!";
-	void    (*f)(unsigned int, char*);
+        *c = *c + 32;
+}
 
-	f = &ft_putchar;
-	ft_striteri(str, f);
+int	main()
+{
+	char	str[] = "EXEMPLE";
+
+	ft_striteri(str, minuscule);
+	printf("%s\n", str);
 	return (0);
 }
 */
