@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:39:17 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/16 17:05:02 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/23 16:13:42 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@
 
 typedef struct s_list
 {
-	void			*content;
+	void		*content;
 	struct s_list	*next;
-}	t_list;
+}			t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
