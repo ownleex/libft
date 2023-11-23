@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 21:39:25 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/15 21:53:53 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/23 15:54:34 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (!s || fd < 0)
-		return ;
 	write(fd, s, ft_strlen(s));
 }
 
