@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 23:50:02 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/15 23:57:27 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/23 14:15:02 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	if (!s || fd < 0)
-		return ;
 	write(fd, s, ft_strlen(s));
 	write(fd, "\n", 1);
 }
