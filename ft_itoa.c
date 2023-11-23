@@ -6,13 +6,13 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 17:15:55 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/22 16:49:21 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/23 13:09:22 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	num_digit(long num)
+int	num_digit(long num)
 {
 	int	cur;
 
@@ -63,7 +63,7 @@ int	main(void)
 {
 	int	n;
 
-	n = 2147483647;
+	n = -2147483647;
 	printf("%s\n", ft_itoa(n));
 	return (0);
 }
