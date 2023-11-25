@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 01:45:11 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/16 16:52:28 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/25 23:09:50 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	*lst = new;
 }
 
-/*
 int     main(void)
 {
 	t_list  *lst;
@@ -33,4 +32,3 @@ int     main(void)
 	printf("%s\n", lst->next->content);
 	return (0);
 }
-*/
