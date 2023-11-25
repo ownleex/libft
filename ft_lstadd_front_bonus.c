@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 01:45:11 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/25 23:09:50 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/25 23:13:18 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	*lst = new;
 }
 
+/*
 int     main(void)
 {
 	t_list  *lst;
@@ -28,7 +29,8 @@ int     main(void)
 	lst = ft_lstnew("first");
 	new_lst = ft_lstnew("second");
 	ft_lstadd_front(&lst, new_lst);
-	printf("%s\n", lst->content);
-	printf("%s\n", lst->next->content);
+	printf("Le premier element : %s\n", (char *)lst->content);
+	printf("Le deuxieme element : %s\n", (char *)lst->next->content);
 	return (0);
 }
+*/
