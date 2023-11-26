@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 16:23:05 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/16 16:36:51 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/26 00:39:42 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,12 @@ int     main(void)
 	t_list  *new_lst;
 	t_list  *new_lst2;
 
-	lst = ft_lstnew("first");
+	lst = ft_lstnew("third");
 	new_lst = ft_lstnew("second");
-	new_lst2 = ft_lstnew("third");
+	new_lst2 = ft_lstnew("first");
 	ft_lstadd_front(&lst, new_lst);
 	ft_lstadd_front(&lst, new_lst2);
-	printf("%s\n", ft_lstlast(lst)->content);
+	printf("le dernier element est %s\n", (char *)ft_lstlast(lst)->content);
 	return (0);
 }
 */

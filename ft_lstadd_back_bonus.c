@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 16:34:54 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/16 16:43:34 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/26 03:30:45 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,7 @@ int     main(void)
 	lst = ft_lstnew("first");
 	new_lst = ft_lstnew("second");
 	ft_lstadd_back(&lst, new_lst);
-	printf("%s\n", lst->content);
-	printf("%s\n", lst->next->content);
+	printf("le dernier element est %s\n", (char *)lst->next->content);
 	return (0);
 }
 */
