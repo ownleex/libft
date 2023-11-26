@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 16:53:04 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/26 16:44:34 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/26 17:03:24 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list	*next;
+	t_list	*liste;
 
 	while (*lst)
 	{
-		next = (*lst)->next;
+		liste = (*lst)->next;
 		del((*lst)->content);
 		free(*lst);
-		*lst = next;
+		*lst = liste;
 	}
 	*lst = NULL;
 }
@@ -41,8 +41,10 @@ int	main(void)
 	printf("%s\n", (char *)lst->content);
 	printf("%s\n", (char *)lst->next->content);
 	ft_lstclear(&lst, free);
-	printf("%s\n", (char *)lst->content);
-	printf("%s\n", (char *)lst->next->content);
+	if (lst == NULL)
+		printf("La mémoire a été libérée avec succès.\n");
+	else
+		printf("La mémoire n'a pas été complètement libérée.\n");
 	return 0;
 }
 */

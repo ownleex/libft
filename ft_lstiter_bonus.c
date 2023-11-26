@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 17:02:00 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/16 17:02:49 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/26 17:41:32 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,33 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 }
 
 /*
-int     main(void)
+void	print_content(void *content)
 {
-	t_list  *lst;
-	t_list  *new_lst;
+	printf("%s\n", (char *)content);
+}
 
-	lst = ft_lstnew("first");
-	new_lst = ft_lstnew("second");
-	ft_lstadd_front(&lst, new_lst);
-	printf("%s\n", lst->content);
-	printf("%s\n", lst->next->content);
-	ft_lstiter(lst, &ft_putstr_fd);
-	return (0);
+int	main()
+{
+	t_list	*elem1, *elem2, *elem3;
+
+	elem1 = (t_list *)malloc(sizeof(t_list));
+	elem2 = (t_list *)malloc(sizeof(t_list));
+	elem3 = (t_list *)malloc(sizeof(t_list));
+	if (!elem1 || !elem2 || !elem3)
+	{
+	printf("Échec de l'allocation de la mémoire.\n");
+	exit(EXIT_FAILURE);
+	}
+	elem1->content = "Element 1";
+	elem1->next = elem2;
+	elem2->content = "Element 2";
+	elem2->next = elem3;
+	elem3->content = "Element 3";
+	elem3->next = NULL;
+	ft_lstiter(elem1, print_content);
+	free(elem1);
+	free(elem2);
+	free(elem3);
+	return 0;
 }
 */
