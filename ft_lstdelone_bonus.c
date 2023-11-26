@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 16:45:52 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/16 16:51:24 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/26 04:01:05 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,26 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 }
 
 /*
-int     main(void)
+void	del_function(void *content)
 {
-	t_list  *lst;
-	t_list  *new_lst;
+	free(content);
+	printf("Contenu libéré.\n");
+}
 
-	lst = ft_lstnew("first");
-	new_lst = ft_lstnew("second");
-	ft_lstadd_front(&lst, new_lst);
-	printf("%s\n", lst->content);
-	printf("%s\n", lst->next->content);
+int	main()
+{
+	t_list *element = (t_list *)malloc(sizeof(t_list));
+	if (!element)
+		return (1);
+	element->content = malloc(sizeof(int));
+	if (!element->content)
+	{
+		free(element);
+		return (1);
+	}
+	*(int *)element->content = 42;
+	printf("Contenu avant suppression : %d\n", *(int *)element->content);
+	ft_lstdelone(element, del_function);
 	return (0);
 }
 */
