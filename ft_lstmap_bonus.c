@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 17:05:37 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/26 18:31:21 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/26 18:40:29 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	del_content(void *content)
 	free(content);
 }
 
-// Une fonction pour afficher le contenu d'un élément de la liste (supposant un int)
+// Une fonction pour afficher le contenu d'un élément de la liste
 void	print_list(t_list *lst)
 {
 	while (lst != NULL)
