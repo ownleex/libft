@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 16:53:04 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/16 16:58:45 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/26 16:44:34 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,19 +27,22 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 }
 
 /*
-int     main(void)
+int	main(void)
 {
-	t_list  *lst;
-	t_list  *new_lst;
+	t_list	*lst;
+	t_list	*new_lst;
 
-	lst = ft_lstnew("first");
-	new_lst = ft_lstnew("second");
+	char *first = ft_strdup("first");
+	char *second = ft_strdup("second");
+
+	lst = ft_lstnew(first);
+	new_lst = ft_lstnew(second);
 	ft_lstadd_front(&lst, new_lst);
-	printf("%s\n", lst->content);
-	printf("%s\n", lst->next->content);
+	printf("%s\n", (char *)lst->content);
+	printf("%s\n", (char *)lst->next->content);
 	ft_lstclear(&lst, free);
-	printf("%s\n", lst->content);
-	printf("%s\n", lst->next->content);
-	return (0);
+	printf("%s\n", (char *)lst->content);
+	printf("%s\n", (char *)lst->next->content);
+	return 0;
 }
 */
