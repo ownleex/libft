@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 17:05:37 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/17 01:23:38 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/26 18:31:21 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,37 +39,66 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 }
 
 /*
-int	main(void)
+// Une fonction simple pour doubler une valeur entière
+void	*double_content(void *content)
 {
-	t_list	*lst;
-	t_list	*newlst;
-	int		values[] = {1, 2, 3, 4, 5};
-	int		i;
+	int *new_content = malloc(sizeof(int));
+	if (new_content)
+		*new_content = *(int *)content * 2;
+	return new_content;
+}
 
-	lst = NULL;
-	i = 0;
-	while (i < 5)
+// Une fonction pour supprimer le contenu d'un élément de la liste
+void	del_content(void *content)
+{
+	free(content);
+}
+
+// Une fonction pour afficher le contenu d'un élément de la liste (supposant un int)
+void	print_list(t_list *lst)
+{
+	while (lst != NULL)
 	{
-		ft_lstadd_back(&lst, ft_lstnew(&values[i]));
-		i++;
+		printf("%d\n", *(int *)lst->content);
+		lst = lst->next;
+	}
+}
+
+int	main()
+{
+	t_list	*lst = NULL;
+	t_list	*new_lst;
+
+	// Ajout de quelques éléments à la liste
+	int values[] = {1, 2, 3, 4, 5};
+	for (int i = 0; i < 5; i++)
+	{
+		int *content = malloc(sizeof(int));
+		*content = values[i];
+		t_list *new_node = ft_lstnew(content);
+		if (new_node == NULL)
+		{
+			// Gestion d'erreur
+			// Libération de la mémoire si l'allocation échoue
+			free(content);
+			ft_lstclear(&lst, del_content);
+			return 1;
+		}
+		ft_lstadd_back(&lst, new_node);
 	}
 
-	// Afficher la liste originale
-	printf("Liste originale: ");
-	ft_lstiter(lst, ft_printlstcontent);
-	printf("\n");
+	// Application de ft_lstmap
+	new_lst = ft_lstmap(lst, double_content, del_content);
 
-	// Appliquer ft_lstmap
-	newlst = ft_lstmap(lst, ft_doubler, ft_del);
-
-	// Afficher la nouvelle liste
-	printf("Nouvelle liste: ");
-	ft_lstiter(newlst, ft_printlstcontent);
-	printf("\n");
+	// Affichage de la liste originale et de la nouvelle liste
+	printf("Original list:\n");
+	print_list(lst);
+	printf("\nDoubled list:\n");
+	print_list(new_lst);
 
 	// Nettoyage
-	ft_lstclear(&lst, ft_del);
-	ft_lstclear(&newlst, ft_del);
-	return (0);
+	ft_lstclear(&lst, del_content);
+	ft_lstclear(&new_lst, del_content);
+	return 0;
 }
 */
