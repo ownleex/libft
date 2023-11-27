@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 01:57:05 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/20 16:55:02 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/27 22:43:51 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ int	ft_strncmp(const char *str1, const char *str2, size_t n)
 /*
 int	main(void)
 {
-	printf("%d\n", ft_strncmp("test\200", "test\0", 7));
 	printf("%d\n", ft_strncmp("test", "tsst", 7));
 	return (0);
 }
