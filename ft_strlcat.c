@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 01:56:28 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/20 16:53:47 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/27 18:29:27 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 	size_t	j;
-	size_t	len_d;
 	size_t	len_s;
+	size_t	total_len;
 
 	i = ft_strlen(dst);
 	j = 0;
-	len_d = ft_strlen(dst);
 	len_s = ft_strlen(src);
-	if (dstsize < 1)
-		return (len_s + dstsize);
+	if (dstsize == 0)
+		return (len_s);
 	while (src[j] && i < dstsize - 1)
 	{
 		dst[i] = src[j];
@@ -32,10 +31,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		j++;
 	}
 	dst[i] = '\0';
-	if (dstsize < len_d)
-		return (len_s + dstsize);
+	if (i > dstsize)
+		total_len = len_s + dstsize;
 	else
-		return (len_d + len_s);
+		total_len = len_s + i;
+	return (total_len);
 }
 
 /*
@@ -46,10 +46,10 @@ int	main(void)
 	unsigned int size = 50;
 	unsigned int result;
 
-	printf("Before ft_strlcat: %s\n", dest);
+	printf("Avant ft_strlcat : %s\n", dest);
 	result = ft_strlcat(dest, src, size);
-	printf("After ft_strlcat: %s\n", dest);
-	printf("Returned value: %u\n", result);
+	printf("Apres ft_strlcat : %s\n", dest);
+	printf("Valeur renvoyee : %u\n", result);
 	return (0);
 }
 */

@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 01:56:42 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/27 16:47:25 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/27 17:09:14 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,8 @@ int	main(void)
 	char	src[] = "bla bla bla";
 	char	dst[255];
 
-	printf("%ld\n", ft_strlcpy(dst, src, 9));
+	printf("Source : %s\n", src);
+	printf("Valeur renvoyee par ft_strlcpy : %ld\n", ft_strlcpy(dst, src, 9));
 	printf("Destination : %s\n", dst);
 	return (0);
 }
