@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 01:56:54 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/27 15:00:11 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/27 15:05:40 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ size_t	ft_strlen(const char *str)
 	return (i);
 }
 
+/*
 int	main(void)
 {
-	int	c;
+	char	c[] = "Hello World";
 
-	c = 'a';
 	printf("Il y a %ld caractère dans la chaine.\n", ft_strlen(c));
-	
 	return (0);
 }
+*/
