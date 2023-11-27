@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 01:57:19 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/19 19:03:24 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/27 22:24:19 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ int	main(void)
 	
 	if (resultat != NULL)
 	{
-		printf("Le caractère '%c' est trouvé à la position : %ld\n",\
-		 c, resultat - chaine);
+		printf("Le dernier caractère '%c' est trouvé à la position : %ld\n",\
+		 c, resultat - chaine + 1);
 	}
 	else
 	{
