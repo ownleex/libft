@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 01:55:09 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/22 22:38:29 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/27 23:04:40 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,19 @@ void	*ft_memchr(const void *s, int c, size_t n)
 }
 
 /*
-int	main(void)=
+int     main(void)
 {
-	const char	s[] = "boujour";
-	int	c = 'j';
-	size_t	n = 5;
-	
-	printf("%p\n", ft_memchr(s, c, n));
-	return (0);
+        const char      s[] = "bonjour";
+        int     c = 'j';
+        size_t  n = 5;
+        void    *result;
+
+        result = ft_memchr(s, c, n);
+        if (result != NULL)
+                printf("Octet trouvé : %c\n", *(char *)result);
+        else
+                printf("Absent dans les %zu premiers caractères.\n", n);
+
+        return (0);
 }
 */
