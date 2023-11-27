@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 14:27:37 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/10 23:20:19 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/28 00:43:14 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *str)
 	int		i;
 
 	i = 0;
-	copy = (char *)malloc(sizeof(char) * (ft_strlen(str) + 1));
+	copy = (char *)malloc(sizeof(char) * (ft_strlen(str)));
 	if (copy == NULL)
 		return (NULL);
 	while (str[i] != '\0')
