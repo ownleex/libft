@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 01:56:00 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/20 16:45:35 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/27 15:09:54 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ int	main(void)
 {
 	char	str[] = "bla bla bla";
 
-	printf("%s\n", str);
+	printf("Avant ft_memset : %s\n", str);
 	ft_memset(str, 'a', 4);
-	printf("%s\n", str);
+	printf("Apres ft_memset : %s\n", str);
 
 	return (0);
 }
