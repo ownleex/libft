@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 01:54:02 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/10 23:22:10 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/27 14:54:00 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,11 @@ int	main(void)
 {
 	int	c;
 
-	c = 5;
-	printf("retourne : %d\n", ft_isdigit(c));
-
+	c = '7';
+	if (ft_isdigit(c))
+		printf("Le caractere est un chiffre\n");
+	else
+		printf("Le caractere n'est pas un chiffre\n");
 	return (0);
 }
 */

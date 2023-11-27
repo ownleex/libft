@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 01:53:53 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/10 23:22:19 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/27 14:51:04 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,10 @@ int	main(void)
 	int	c;
 
 	c = -1;
-	printf("retourne : %d\n", ft_isascii(c));
-	
+	if (ft_isascii(c))
+		printf("Le caractere est dans la table ASCII\n");
+	else
+		printf("Le caractere n'est pas dans la table ASCII\n");
 	return (0);
 }
 */

@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 01:54:49 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/10 23:22:03 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/27 14:56:55 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,10 @@ int	main(void)
 	int	c;
 
 	c = 'a';
-	printf("retourne : %d\n", ft_isprint(c));
-	
+	if (ft_isprint(c))
+		printf("Le caractere est imprimable\n");
+	else
+		printf("Le caractere n'est pas imprimable\n");	
 	return (0);
 }
 */

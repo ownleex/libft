@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 01:53:40 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/12 00:18:50 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/27 14:52:30 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,10 @@ int	main(void)
 	int	c;
 
 	c = '0';
-	printf("%d\n", ft_isalpha(c));
+	if (ft_isalpha(c))
+		printf("Le caractere est une lettre\n");
+	else
+		printf("Le caractere n'est pas une lettre\n");
 	return (0);
 }
 */
