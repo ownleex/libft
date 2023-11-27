@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 01:55:09 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/27 23:18:01 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/27 23:18:56 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int     main(void)
         if (result != NULL)
                 printf("Octet trouvé : %c\n", *(char *)result);
         else
-                printf("Absent dans les %zu premiers caractères.\n", n);
+                printf("Absent dans les %ld premiers caractères.\n", n);
 
         return (0);
 }
