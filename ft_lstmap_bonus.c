@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 17:05:37 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/26 18:40:29 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/27 14:27:05 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 }
 
 /*
-// Une fonction simple pour doubler une valeur entière
 void	*double_content(void *content)
 {
 	int *new_content = malloc(sizeof(int));
@@ -48,13 +47,11 @@ void	*double_content(void *content)
 	return new_content;
 }
 
-// Une fonction pour supprimer le contenu d'un élément de la liste
 void	del_content(void *content)
 {
 	free(content);
 }
 
-// Une fonction pour afficher le contenu d'un élément de la liste
 void	print_list(t_list *lst)
 {
 	while (lst != NULL)
@@ -69,7 +66,6 @@ int	main()
 	t_list	*lst = NULL;
 	t_list	*new_lst;
 
-	// Ajout de quelques éléments à la liste
 	int values[] = {1, 2, 3, 4, 5};
 	for (int i = 0; i < 5; i++)
 	{
@@ -78,8 +74,6 @@ int	main()
 		t_list *new_node = ft_lstnew(content);
 		if (new_node == NULL)
 		{
-			// Gestion d'erreur
-			// Libération de la mémoire si l'allocation échoue
 			free(content);
 			ft_lstclear(&lst, del_content);
 			return 1;
@@ -87,16 +81,13 @@ int	main()
 		ft_lstadd_back(&lst, new_node);
 	}
 
-	// Application de ft_lstmap
 	new_lst = ft_lstmap(lst, double_content, del_content);
 
-	// Affichage de la liste originale et de la nouvelle liste
 	printf("Original list:\n");
 	print_list(lst);
 	printf("\nDoubled list:\n");
 	print_list(new_lst);
 
-	// Nettoyage
 	ft_lstclear(&lst, del_content);
 	ft_lstclear(&new_lst, del_content);
 	return 0;
