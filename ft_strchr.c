@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 01:56:12 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/27 22:21:36 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/27 22:53:32 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	main(void)
 	
 	if (resultat != NULL)
 	{
-		printf("Le 1er caractère '%c' est la %ldeme lettre\n",\
+		printf("Le caractère '%c' est la %ldeme lettre\n",\
 		 c, resultat - chaine + 1);
 	}
 	else
