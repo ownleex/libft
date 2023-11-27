@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 01:56:12 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/27 22:09:45 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/27 22:19:54 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strchr(const char *s, int c)
 	while (s[i])
 	{
 		if (s[i] == (char) c)
-			return ((char *) s + i);
+			break;
 		i++;
 	}
 	if (s[i] == (char) c)
@@ -38,7 +38,7 @@ int	main(void)
 	
 	if (resultat != NULL)
 	{
-		printf("Le caractère '%c' est trouvé à la position : %ld\n",\
+		printf("Le caractère '%c' est la %ldeme lettre\n",\
 		 c, resultat - chaine + 1);
 	}
 	else
