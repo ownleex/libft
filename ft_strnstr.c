@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:08:38 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/27 23:40:32 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/27 23:43:48 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strnstr(const char *str1, const char *str2, size_t n)
 	size_t	i;
 	size_t	len;
 
-	if (!*str2)
+	if (*str2 == 0)
 		return ((char *)str1);
 	i = 0;
 	len = ft_strlen(str2);
