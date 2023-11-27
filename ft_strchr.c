@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 01:56:12 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/27 22:53:32 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/27 22:56:00 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strchr(const char *s, int c)
 	while (s[i])
 	{
 		if (s[i] == (char) c)
-			break;
+			break ;
 		i++;
 	}
 	if (s[i] == (char) c)
