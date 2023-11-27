@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:08:38 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/20 23:33:05 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/27 23:40:32 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strnstr(const char *str1, const char *str2, size_t n)
 	len = ft_strlen(str2);
 	while (str1[i] && i + len <= n)
 	{
-		if (!ft_strncmp(str1 + i, str2, len))
+		if (ft_strncmp(str1 + i, str2, len) == 0)
 			return ((char *)str1 + i);
 		i++;
 	}
@@ -40,13 +40,13 @@ int main(void)
     char *result = ft_strnstr(haystack, needle, len);
     if (result != NULL)
     {
-	printf("Cherche '%s' dans '%s' avec les %zu characters.\n", \
+	printf("Cherche '%s' dans '%s' dans les %ld 1er caracteres.\n", \
 		needle, haystack, len);
 	printf("Resultat: %s\n", result);
     }
     else
     {
-	printf("Did not find '%s' in '%s' within the first %zu characters.\n", \
+	printf("Ne trouve pas '%s' dans '%s' dans les %ld 1er caracteres.\n", \
 		needle, haystack, len);
     }
 
