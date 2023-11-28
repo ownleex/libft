@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:07:22 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/20 19:14:54 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/28 19:12:21 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,27 @@ void	*ft_calloc(size_t count, size_t size)
 /*
 int	main(void)
 {
-	char	*str;
-	int		i;
+	int	*array;
+	size_t	n = 10;
 
-	i = 0;
-	str = (char *)ft_calloc(10, sizeof(char));
-	while (i < 10)
+	array = (int *)ft_calloc(n, sizeof(int));
+	if (array == NULL)
 	{
-		printf("%c", str[i]);
-		i++;
+		printf("Allocation échouée.\n");
+		return (1);
 	}
+
+	for (size_t i = 0; i < n; i++)
+	{
+		if (array[i] != 0)
+		{
+			printf("Erreur d'initialisation à l'indice %zu.\n", i);
+			free(array);
+			return (1);
+		}
+	}
+	printf("Allocation et initialisation réussies.\n");
+	free(array);
 	return (0);
 }
 */
