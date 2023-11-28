@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 16:53:04 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/26 17:03:24 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/28 15:41:50 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,37 +14,39 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list	*liste;
+	t_list	*next_tmp;
 
 	while (*lst)
 	{
-		liste = (*lst)->next;
+		next_temp = (*lst)->next;
 		del((*lst)->content);
 		free(*lst);
-		*lst = liste;
+		*lst = next_tmp;
 	}
 	*lst = NULL;
 }
 
 /*
-int	main(void)
+void	del_function(void *content)
 {
-	t_list	*lst;
-	t_list	*new_lst;
+	free(content);
+	printf("Contenu libéré.\n");
+}
 
-	char *first = ft_strdup("first");
-	char *second = ft_strdup("second");
-
-	lst = ft_lstnew(first);
-	new_lst = ft_lstnew(second);
-	ft_lstadd_front(&lst, new_lst);
-	printf("%s\n", (char *)lst->content);
-	printf("%s\n", (char *)lst->next->content);
-	ft_lstclear(&lst, free);
-	if (lst == NULL)
-		printf("La mémoire a été libérée avec succès.\n");
-	else
-		printf("La mémoire n'a pas été complètement libérée.\n");
-	return 0;
+int	main()
+{
+	t_list *element = (t_list *)malloc(sizeof(t_list));
+	if (!element)
+		return (0);
+	element->content = malloc(sizeof(int));
+	if (!element->content)
+	{
+		free(element);
+		return (0);
+	}
+	*(int *)element->content = 42;
+	printf("Contenu avant suppression : %d\n", *(int *)element->content);
+	ft_lstdelone(element, del_function);
+	return (0);
 }
 */
