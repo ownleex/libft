@@ -6,20 +6,20 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:09:52 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/28 01:22:37 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/28 20:41:20 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_char_in_set(char c, char const *set)
+static int	ft_char_in_set(char s1, char const *set)
 {
 	size_t	i;
 
 	i = 0;
 	while (set[i])
 	{
-		if (set[i] == c)
+		if (set[i] == s1)
 			return (1);
 		i++;
 	}
