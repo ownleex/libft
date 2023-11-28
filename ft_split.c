@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 18:17:41 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/28 18:15:41 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/28 19:59:18 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,13 +62,13 @@ static char	*ft_putword(char *word, char const *s, int i, int word_len)
 static char	**ft_split_words(char const *s, char c, char **s2, int num_words)
 {
 	int	i;
-	int	word;
+	int	wordposit;
 	int	word_len;
 
 	i = 0;
-	word = 0;
+	wordposit = 0;
 	word_len = 0;
-	while (word < num_words)
+	while (wordposit < num_words)
 	{
 		while (s[i] && s[i] == c)
 			i++;
@@ -77,14 +77,14 @@ static char	**ft_split_words(char const *s, char c, char **s2, int num_words)
 			i++;
 			word_len++;
 		}
-		s2[word] = (char *)malloc(sizeof(char) * (word_len + 1));
-		if (!s2[word])
-			return (ft_free(s2, word));
-		ft_putword(s2[word], s, i, word_len);
+		s2[wordposit] = (char *)malloc(sizeof(char) * (word_len + 1));
+		if (!s2[wordposit])
+			return (ft_free(s2, wordposit));
+		ft_putword(s2[wordposit], s, i, word_len);
 		word_len = 0;
-		word++;
+		wordposit++;
 	}
-	s2[word] = 0;
+	s2[wordposit] = 0;
 	return (s2);
 }
 
