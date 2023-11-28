@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 00:07:37 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/28 19:44:35 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/28 19:50:17 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	ft_putnbr_fd(int nb, int fd)
 int	main(void)
 {
 	ft_putnbr_fd(-1599655345, 1);
-	write(1, "\n", 1);
+	ft_putchar_fd('\n', 1);
 	return (0);
 }
 */

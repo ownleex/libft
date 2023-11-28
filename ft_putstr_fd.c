@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 21:39:25 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/23 15:54:34 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/28 19:52:34 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int		main(void)
 {
 	char	*s;
 
-	s = "Hello World!";
+	s = "Hello World!\n";
 	ft_putstr_fd(s, 1);
 	return (0);
 }
