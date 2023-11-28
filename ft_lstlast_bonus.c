@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 16:23:05 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/26 00:39:42 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/28 14:58:58 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_list	*ft_lstlast(t_list *lst)
 			return (lst);
 		lst = lst->next;
 	}
-	return (lst);
+	return (0);
 }
 
 /*
