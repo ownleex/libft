@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 17:33:25 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/23 14:05:07 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/28 02:28:11 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,9 @@ int	main()
 	char	*str = "HELLO";
 	char	*result;
 
+	printf("Avant strmapi : %s\n", str);
 	result = ft_strmapi(str, minuscule);
-	printf("%s\n", result);
+	printf("Apres strmapi : %s\n", result);
 	free(result);
 	return 0;
 }
