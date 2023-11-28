@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 18:17:41 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/28 18:03:01 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/28 18:13:23 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,17 @@ static int	ft_count_words(char const *str, char c)
 		}
 	}
 	return (count);
+}
+
+static char	**ft_free(char **s2, int word)
+{
+	while (word > 0)
+	{
+		free(s2[word]);
+		word--;
+	}
+	free(s2);
+	return (NULL);
 }
 
 static char	*ft_putword(char *word, char const *s, int i, int word_len)
@@ -68,8 +79,7 @@ static char	**ft_split_words(char const *s, char c, char **s2, int num_words)
 		}
 		s2[word] = (char *)malloc(sizeof(char) * (word_len + 1));
 		if (!s2[word])
-			free(s2[word]);
-			return (NULL);
+			return (ft_free(s2, word));
 		ft_putword(s2[word], s, i, word_len);
 		word_len = 0;
 		word++;
