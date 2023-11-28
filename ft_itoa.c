@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 17:15:55 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/23 13:09:22 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/28 02:18:05 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 int	num_digit(long num)
 {
-	int	cur;
+	int	len;
 
-	cur = 0;
+	len = 0;
 	if (num == 0)
 		return (1);
 	if (num < 0)
-		cur++;
+		len++;
 	while (num != 0)
 	{
 		num = num / 10;
-		cur++;
+		len++;
 	}
-	return (cur);
+	return (len);
 }
 
 char	*ft_itoa(int n)
