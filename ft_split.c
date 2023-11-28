@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 18:17:41 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/28 01:36:27 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/28 01:42:26 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,7 @@ char	**ft_split(char const *s, char c)
 	return (s2);
 }
 
+/*
 int	main(void)
 {
 	char	**res;
@@ -106,3 +107,4 @@ int	main(void)
 	}
 	return (0);
 }
+*/
