@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 18:17:41 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/28 18:13:23 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/28 18:15:41 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ static char	**ft_free(char **s2, int word)
 {
 	while (word > 0)
 	{
-		free(s2[word]);
 		word--;
+		free(s2[word]);
 	}
 	free(s2);
 	return (NULL);
