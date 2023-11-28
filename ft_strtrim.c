@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:09:52 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/22 15:41:07 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/28 01:11:40 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (end > start && ft_char_in_set(s1[end - 1], set))
 		end--;
 	str = (char *)malloc(sizeof(char) * (end - start + 1));
-	if (!str)
+	if (str = '\0')
 		return (NULL);
 	i = 0;
 	while (start < end)
