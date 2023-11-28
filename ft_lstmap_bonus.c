@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 17:05:37 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/28 15:58:18 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/28 16:17:28 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*tmp;
 	void	*fcontent;
 
-	if (!lst || !f)
+	if (!lst || !f || !del)
 		return (NULL);
 	newlst = NULL;
 	while (lst)
@@ -63,33 +63,25 @@ void	print_list(t_list *lst)
 
 int	main()
 {
-	t_list	*lst = NULL;
-	t_list	*new_lst;
+	t_list	*lst;
+	t_list	*mapped_lst;
+	int	arr[] = {1, 2, 3, 4, 5};
+	int	i;
 
-	int values[] = {1, 2, 3, 4, 5};
-	for (int i = 0; i < 5; i++)
+	lst = NULL;
+	i = 0;
+	while (i < 5)
 	{
-		int *content = malloc(sizeof(int));
-		*content = values[i];
-		t_list *new_node = ft_lstnew(content);
-		if (new_node == NULL)
-		{
-			free(content);
-			ft_lstclear(&lst, del_content);
-			return 1;
-		}
-		ft_lstadd_back(&lst, new_node);
+		ft_lstadd_back(&lst, ft_lstnew(&arr[i]));
+		i++;
 	}
-
-	new_lst = ft_lstmap(lst, double_content, del_content);
-
-	printf("Original list:\n");
+	printf("Liste originale :\n");
 	print_list(lst);
-	printf("\nDoubled list:\n");
-	print_list(new_lst);
-
+	mapped_lst = ft_lstmap(lst, double_content, del_content);
+	printf("\nListe après ft_lstmap :\n");
+	print_list(mapped_lst);
 	ft_lstclear(&lst, del_content);
-	ft_lstclear(&new_lst, del_content);
+	ft_lstclear(&mapped_lst, del_content);
 	return 0;
 }
 */
