@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 18:17:41 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/22 19:30:53 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/28 01:34:30 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static char	*ft_putword(char *word, char const *s, int i, int word_len)
 	return (word);
 }
 
-static char	**ft_split_words(char const *s, char c, char **s2, int num_words)
+static char	**ft_split_words(char const *s, char c, char **result, int num_words)
 {
 	int	i;
 	int	word;
@@ -66,29 +66,29 @@ static char	**ft_split_words(char const *s, char c, char **s2, int num_words)
 			i++;
 			word_len++;
 		}
-		s2[word] = (char *)malloc(sizeof(char) * (word_len + 1));
-		if (!s2[word])
+		result[word] = (char *)malloc(sizeof(char) * (word_len + 1));
+		if (!result[word])
 			return (NULL);
-		ft_putword(s2[word], s, i, word_len);
+		ft_putword(result[word], s, i, word_len);
 		word_len = 0;
 		word++;
 	}
-	s2[word] = 0;
-	return (s2);
+	result[word] = 0;
+	return (result);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char			**s2;
+	char			**result;
 	unsigned int	num_words;
 
 	if (!s)
 		return (NULL);
 	num_words = ft_count_words(s, c);
-	s2 = (char **)malloc(sizeof(char *) * (num_words + 1));
-	if (!s2)
+	result = (char **)malloc(sizeof(char *) * (num_words + 1));
+	if (!result)
 		return (NULL);
-	s2 = ft_split_words(s, c, s2, num_words);
+	result = ft_split_words(s, c, result, num_words);
 	return (s2);
 }
 
@@ -99,7 +99,7 @@ int	main(void)
 	int		i;
 
 	i = 0;
-	res = ft_split("   lorem   ipsum dolor sit amet el Suspendisse", ' ');
+	res = ft_split("la chaine de   caractere a     spliter", ' ');
 	while (res[i] != NULL)
 	{
 		printf("%s\n", res[i]);
