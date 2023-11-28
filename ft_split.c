@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 18:17:41 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/28 01:35:41 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/28 01:36:27 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static char	*ft_putword(char *word, char const *s, int i, int word_len)
 	return (word);
 }
 
-static char	**ft_split_words(char const *s, char c, char **result, int num_words)
+static char	**ft_split_words(char const *s, char c, char **s2, int num_words)
 {
 	int	i;
 	int	word;
@@ -66,33 +66,32 @@ static char	**ft_split_words(char const *s, char c, char **result, int num_words
 			i++;
 			word_len++;
 		}
-		result[word] = (char *)malloc(sizeof(char) * (word_len + 1));
-		if (!result[word])
+		s2[word] = (char *)malloc(sizeof(char) * (word_len + 1));
+		if (!s2[word])
 			return (NULL);
-		ft_putword(result[word], s, i, word_len);
+		ft_putword(s2[word], s, i, word_len);
 		word_len = 0;
 		word++;
 	}
-	result[word] = 0;
-	return (result);
+	s2[word] = 0;
+	return (s2);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char			**result;
+	char			**s2;
 	unsigned int	num_words;
 
 	if (!s)
 		return (NULL);
 	num_words = ft_count_words(s, c);
-	result = (char **)malloc(sizeof(char *) * (num_words + 1));
-	if (!result)
+	s2 = (char **)malloc(sizeof(char *) * (num_words + 1));
+	if (!s2)
 		return (NULL);
-	result = ft_split_words(s, c, result, num_words);
-	return (result);
+	s2 = ft_split_words(s, c, s2, num_words);
+	return (s2);
 }
 
-/*
 int	main(void)
 {
 	char	**res;
@@ -107,4 +106,3 @@ int	main(void)
 	}
 	return (0);
 }
-*/
