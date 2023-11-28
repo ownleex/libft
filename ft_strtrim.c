@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:09:52 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/28 01:15:09 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/28 01:16:34 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 		start++;
 	}
-	str[i] == '\0';
-	i = 0;
-	start = 0;
-	end = 0;
+	str[i] = '\0';
 	return (str);
 }
 
