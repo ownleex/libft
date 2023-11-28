@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 17:05:37 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/27 14:38:30 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/28 15:55:32 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,19 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*newlst;
 	t_list	*tmp;
-	void	*contt;
+	void	*contenu;
 
 	if (!lst || !f)
 		return (NULL);
 	newlst = NULL;
 	while (lst)
 	{
-		contt = f(lst->content);
-		tmp = ft_lstnew(contt);
+		contenu = f(lst->content);
+		tmp = ft_lstnew(contenu);
 		if (!tmp)
 		{
 			if (del)
-				del(contt);
+				del(contenu);
 			ft_lstclear(&newlst, del);
 			return (NULL);
 		}
