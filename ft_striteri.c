@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 18:39:43 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/23 14:02:53 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/28 02:25:50 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,9 @@ int	main()
 {
 	char	str[] = "EXEMPLE";
 
+	printf("avant striteri : %s\n", str);
 	ft_striteri(str, minuscule);
-	printf("%s\n", str);
+	printf("apres striteri : %s\n", str);
 	return (0);
 }
 */
