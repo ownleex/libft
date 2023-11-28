@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 16:53:04 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/28 15:41:50 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/28 15:42:45 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 
 	while (*lst)
 	{
-		next_temp = (*lst)->next;
+		next_tmp = (*lst)->next;
 		del((*lst)->content);
 		free(*lst);
 		*lst = next_tmp;
