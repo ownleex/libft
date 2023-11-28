@@ -6,7 +6,7 @@
 /*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 17:15:55 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/28 02:33:09 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2023/11/28 02:37:38 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int	num_digit(long num)
 	len = 0;
 	if (num == 0)
 		return (1);
+	if (num < 0)
+		len++;
 	while (num != 0)
 	{
 		num = num / 10;
