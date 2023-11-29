@@ -6,7 +6,7 @@
 #    By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/10 01:58:16 by ayarmaya          #+#    #+#              #
-#    Updated: 2023/11/29 14:45:11 by ayarmaya         ###   ########.fr        #
+#    Updated: 2023/11/29 14:53:00 by ayarmaya         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,10 +65,10 @@ OBJS_MAND	=	$(SRCS:.c=.o)
 
 OBJS_BONUS	=	$(B_SRCS:.c=.o)
 
-ifdef WITH_BONUS
-OBJS		=	$(OBJS_MAND) $(OBJS_BONUS)
-else
+ifndef WITH_BONUS
 OBJS		=	$(OBJS_MAND)
+else
+OBJS		=	$(OBJS_MAND) $(OBJS_BONUS)
 endif
 
 CC		=	gcc
