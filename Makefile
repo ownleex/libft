@@ -6,7 +6,7 @@
 #    By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/10 01:58:16 by ayarmaya          #+#    #+#              #
-#    Updated: 2023/11/18 00:24:11 by ayarmaya         ###   ########.fr        #
+#    Updated: 2023/11/29 14:45:11 by ayarmaya         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,9 +61,15 @@ SRCS		=	$(addsuffix .c, ${SRC})
 
 B_SRCS		=	$(addsuffix _bonus.c, ${SRC_BONUS})
 
-OBJS		=	$(SRCS:.c=.o)
+OBJS_MAND	=	$(SRCS:.c=.o)
 
 OBJS_BONUS	=	$(B_SRCS:.c=.o)
+
+ifdef WITH_BONUS
+OBJS		=	$(OBJS_MAND) $(OBJS_BONUS)
+else
+OBJS		=	$(OBJS_MAND)
+endif
 
 CC		=	gcc
 
@@ -78,8 +84,8 @@ all:		$(NAME)
 $(NAME): 	$(OBJS)
 			$(AR) $(NAME) $(OBJS)
 
-bonus:		$(OBJS) $(OBJS_BONUS)
-			$(AR) $(NAME) $(OBJS) $(OBJS_BONUS)
+bonus:
+			@make WITH_BONUS=1 all
 
 clean:
 			$(RM) $(OBJS) $(OBJS_BONUS)
