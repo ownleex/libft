@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/10 01:58:16 by ayarmaya          #+#    #+#              #
-#    Updated: 2023/11/29 14:53:00 by ayarmaya         ###   ########.fr        #
+#    Updated: 2025/04/27 19:00:18 by ayarmaya         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,20 +79,26 @@ RM		= 	rm -f
 
 AR		= 	ar crs
 
-all:		$(NAME)
+all: $(NAME)
 
-$(NAME): 	$(OBJS)
-			$(AR) $(NAME) $(OBJS)
+$(NAME): $(OBJS)
+	$(AR) $(NAME) $(OBJS)
 
 bonus:
-			@make WITH_BONUS=1 all
+	@make WITH_BONUS=1 all
+
+%.o: %.c
+	$(CC) $(CFLAGS) -MMD -MP -c $< -o $@
 
 clean:
-			$(RM) $(OBJS) $(OBJS_BONUS)
+	$(RM) $(OBJS_MAND) $(OBJS_BONUS) $(OBJS_MAND:.o=.d) $(OBJS_BONUS:.o=.d)
 
-fclean:		clean
-			$(RM) $(NAME)
+fclean: clean
+	$(RM) $(NAME)
 
-re:		fclean all
+re: fclean all
 
-.PHONY:	all clean fclean re bonus
+-include $(OBJS_MAND:.o=.d)
+-include $(OBJS_BONUS:.o=.d)
+
+.PHONY: all clean fclean re bonus
