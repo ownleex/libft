@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayarmaya <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ayarmaya <ayarmaya@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 14:50:26 by ayarmaya          #+#    #+#             */
-/*   Updated: 2023/11/28 20:46:52 by ayarmaya         ###   ########.fr       */
+/*   Updated: 2025/06/06 20:28:42 by ayarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	main(void)
 	char	*substr;
 
 	str = "anticonstitutionnellement";
-	substr = ft_substr(str, 3, 8);
+	substr = ft_substr(str, 4, 12);
 	printf("%s\n", substr);
 	return (0);
 }
